@@ -1,0 +1,29 @@
+{
+  "name": "Coyo Analytics CSV Export",
+  "version": "1.0.0",
+  "description": "Extract Data from Coyo Analytics Backend and Export it to CSV-File",
+  "manifest_version": 2,
+  "author": "Arvid Strauß",
+  "permissions": ["activeTab", "tabs", "bookmarks", "storage", "contextMenus"],
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Coyo Analytics Export CSV",
+    "default_icon": "images/icon.png"
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"],
+      "css": ["css/content.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["js/background.js"]
+  }
+}

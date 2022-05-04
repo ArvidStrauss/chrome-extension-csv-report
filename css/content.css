@@ -1,0 +1,3 @@
+/* this is defined as a content script and therefore executed when the website opens */
+html body {
+}
