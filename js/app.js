@@ -93,7 +93,7 @@ form.addEventListener('submit', function (event) {
             logData = '';
             for (const [key, value] of Object.entries(element)) {
               //put all Text in QuotationMarks into CSV to avoid errors with \n and \r
-              logData += `"${value.replace(/#/g, '')}";`;
+              logData += typeof value === 'string' ? `"${value.replace(/#/g, '')}";` : `"${value}";`;
             }
             csvContent += logData + '\r\n';
           });
