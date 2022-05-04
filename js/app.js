@@ -60,13 +60,13 @@ form.addEventListener('submit', function (event) {
         body: JSON.stringify({
           operationName: 'contentPerformance',
           variables: {
-            from: '2020-08-04T00:00:00.000+02:00',
-            to: '2022-03-22T23:59:59.999+01:00',
+            from: form.elements['date-start'].value,
+            to: form.elements['date-end'].value,
             title: '',
             typeInclusions: ['blog-article', 'timeline-item', 'wiki-article'],
             sortColumn: 'reach',
             sortOrder: 'desc',
-            limit: 500,
+            limit: form.elements['number-results'].value,
             senderId: null,
             includeUserGeneratedContent: true,
             globalFilters: [],

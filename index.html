@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
-    <title>Coyo Analytics CSV Export</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coyo Analytics CSV Export</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -16,6 +18,11 @@
         <div class="field">
           <label for="date-end">Enddatum:</label>
           <input type="datetime-local" id="date-end" name="date-end" value="" placeholder="Enddatum eingeben" />
+          <small></small>
+        </div>
+        <div class="field">
+          <label for="number-results">Anzahl Datensätze:</label>
+          <input type="number" id="number-results" name="number-results" value="500" placeholder="Anzahl Datensätze" />
           <small></small>
         </div>
         <div class="field">
